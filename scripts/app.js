@@ -46,25 +46,33 @@ comfirmBuyingIt.addEventListener("click", () => {
 
 const createElement = (itemName, itemCost) => {
     let div = document.createElement("div");
+    div.style.background = "linear-gradient(180deg, #E0D2C7, #44B09E)"
     div.style.border = "1px solid black";
     div.classList.add("mt-2");
 
     let p1 = document.createElement("p");
     p1.innerText = "Purchased: ";
+    p1.style.fontSize = "30px"
+    p1.style.fontWeight = "bold"
     let span1 = document.createElement("span");
     span1.innerText = itemName;
 
     let p2 = document.createElement("p");
     p2.innerText = "Cost: $";
+    p2.style.fontSize = "30px"
+    p2.style.fontWeight = "bold"
     let span2 = document.createElement("span");
     span2.innerText = itemCost;
 
     let button = document.createElement("button");
     button.innerText = "Remove";
     button.style.backgroundColor = "red";
+    button.style.color = "white"
+    button.style.fontWeight = "bold"
+    button.style.fontSize = "20px"
     button.style.border = "none";
     button.style.borderRadius = "10px";
-    button.style.padding = "5px";
+    button.style.padding = "10px";
     button.style.marginBottom = "5px";
     button.addEventListener("click", () => {
         div.remove();
