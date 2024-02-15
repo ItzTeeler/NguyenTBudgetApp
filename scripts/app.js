@@ -8,13 +8,12 @@ let settingCostOfItemId = document.getElementById("settingCostOfItemId");
 let comfirmBuyingIt = document.getElementById("comfirmBuyingIt");
 let displayItems = document.getElementById("displayItems");
 
-let budget = 10000;
 let itemNameArray = getLocalStorage();
 let itemCostArray = getLocalStorageCash();
 
 
 comfirmingBalance.addEventListener("click", () => {
-    budget = parseInt(settingBalance.value);
+    let budget = parseInt(settingBalance.value);
     if (isNaN(budget)) {
         alert("Please enter a valid number.");
         return;
@@ -33,7 +32,7 @@ comfirmBuyingIt.addEventListener("click", () => {
         return;
     }
     if (itemNameArray.includes(itemNameValue)) {
-        alert("An item with the same name already exists. Please choose a different name.");
+        alert("An item with the name already exists.");
         return;
     }
 
