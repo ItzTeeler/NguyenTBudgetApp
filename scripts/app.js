@@ -20,6 +20,7 @@ comfirmingBalance.addEventListener("click", () => {
     }
     moneyCount.innerText = budget;
     saveToLocalStorageBudget(budget);
+    UpdateBudget();
 });
 
 
